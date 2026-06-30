@@ -1,0 +1,124 @@
+﻿<Window x:Class="CakeFlow.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CakeFlow.App"
+        Title="🍰 CakeFlow - Учет заказов" 
+        Height="600" Width="1000" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <local:StatusColorConverter x:Key="StatusColorConverter"/>
+    </Window.Resources>
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Верхняя панель -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="👤 Пользователь: " FontWeight="Bold"/>
+            <TextBlock Name="lblUserFullName" Text="Загрузка..." Margin="0,0,20,0"/>
+            <TextBlock Text="🔑 Роль: " FontWeight="Bold"/>
+            <TextBlock Name="lblUserRole" Text="Загрузка..." Margin="0,0,20,0"/>
+            <Button Content="🚪 Выйти" Click="Logout_Click" Width="80" Height="25" 
+                    Background="#FF6B6B" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+            <Button Content="🔄 Обновить" Click="Refresh_Click" Width="80" Height="25" Margin="10,0,0,0" 
+                    Background="#4A90D9" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+        </StackPanel>
+
+        <!-- Панель поиска -->
+        <WrapPanel Grid.Row="1" Margin="0,0,0,10">
+            <TextBlock Text="🔍 Поиск:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Bold"/>
+            <TextBox Name="txtSearch" Width="150" Margin="0,0,10,0" TextChanged="Search_TextChanged"/>
+            
+            <TextBlock Text="📌 Статус:" VerticalAlignment="Center" Margin="0,0,5,0" FontWeight="Bold"/>
+            <ComboBox Name="cmbStatus" Width="100" Margin="0,0,10,0" SelectionChanged="Filter_Changed">
+                <ComboBoxItem Content="Все" IsSelected="True"/>
+                <ComboBoxItem Content="New"/>
+                <ComboBoxItem Content="InProgress"/>
+                <ComboBoxItem Content="Ready"/>
+                <ComboBoxItem Content="Issued"/>
+            </ComboBox>
+
+            <Button Name="btnAddOrder" Content="➕ Новый заказ" Click="AddOrder_Click" Width="100" Height="30" 
+                    Margin="0,0,10,0" Background="#4CAF50" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+            <Button Name="btnStatistics" Content="📊 Статистика" Click="ShowStatistics_Click" Width="100" Height="30" 
+                    Background="#FF9800" Foreground="White" BorderThickness="0" Cursor="Hand"/>
+            <Button Name="btnManageUsers" Content="👥 Пользователи" Click="ManageUsers_Click" 
+                    Width="120" Height="30" Margin="0,0,10,0" Background="#3F51B5" Foreground="White" 
+                    BorderThickness="0" Cursor="Hand"/>
+        </WrapPanel>
+
+        <!-- Таблица заказов -->
+        <DataGrid Grid.Row="2" Name="dgOrders" AutoGenerateColumns="False" 
+                  IsReadOnly="True" SelectionChanged="Order_SelectionChanged"
+                  AlternatingRowBackground="#F9F9F9" GridLinesVisibility="Horizontal"
+                  FontSize="13" RowHeight="35">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="№ заказа" Binding="{Binding OrderNumber}" Width="100"/>
+                <DataGridTextColumn Header="Клиент" Binding="{Binding ClientName}" Width="120"/>
+                <DataGridTextColumn Header="Торт" Binding="{Binding CakeName}" Width="120"/>
+                <DataGridTextColumn Header="Тип" Binding="{Binding CakeType}" Width="90"/>
+                <DataGridTextColumn Header="Статус" Binding="{Binding Status}" Width="100">
+                    <DataGridTextColumn.ElementStyle>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="Foreground" Value="{Binding Status, Converter={StaticResource StatusColorConverter}}"/>
+                        </Style>
+                    </DataGridTextColumn.ElementStyle>
+                </DataGridTextColumn>
+                <DataGridTextColumn Header="Срок" Binding="{Binding DesiredDate, StringFormat=dd.MM.yyyy}" Width="90"/>
+                <DataGridTextColumn Header="Кондитер" Binding="{Binding AssignedToUserId}" Width="100"/>
+                <DataGridTemplateColumn Header="⚠️" Width="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="⚠️" Foreground="Red" FontSize="18" HorizontalAlignment="Center"
+                                       Visibility="{Binding IsProblem, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Детали заказа -->
+        <Grid Grid.Row="3" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <TextBlock Text="📋 Детали заказа:" FontWeight="Bold" Margin="0,0,0,5"/>
+                <TextBox Name="txtOrderDetails" Height="60" TextWrapping="Wrap" IsReadOnly="True" 
+                         Background="#F5F5F5" BorderBrush="#CCC" BorderThickness="1" Padding="5"/>
+                <WrapPanel Margin="0,5,0,0">
+                    <Button Name="btnChangeStatus" Content="🔄 Статус" Click="ChangeStatus_Click" 
+                            Width="100" Height="30" Margin="0,0,10,0" Background="#2196F3" Foreground="White" 
+                            BorderThickness="0" Cursor="Hand"/>
+                    <Button Name="btnAssignConfectioner" Content="👨‍🍳 Назначить" Click="AssignConfectioner_Click" 
+                            Width="110" Height="30" Margin="0,0,10,0" Background="#9C27B0" Foreground="White" 
+                            BorderThickness="0" Cursor="Hand"/>
+                    <Button Name="btnAddComment" Content="💬 Коммент" Click="AddComment_Click" 
+                            Width="100" Height="30" Margin="0,0,10,0" Background="#607D8B" Foreground="White" 
+                            BorderThickness="0" Cursor="Hand"/>
+                    <Button Name="btnShowComments" Content="📝 Все комм" Click="ShowComments_Click" 
+                            Width="100" Height="30" Margin="0,0,10,0" Background="#00BCD4" Foreground="White" 
+                            BorderThickness="0" Cursor="Hand"/>
+                    <Button Name="btnRequestHelp" Content="🆘 Помощь" Click="RequestHelp_Click" 
+                            Width="100" Height="30" Margin="0,0,10,0" Background="#FF9800" Foreground="White" 
+                            BorderThickness="0" Cursor="Hand"/>
+                    <Button Name="btnResolveProblem" Content="✅ Решить" Click="ResolveProblem_Click" 
+                            Width="100" Height="30" Margin="0,0,10,0" Background="#4CAF50" Foreground="White" 
+                            BorderThickness="0" Cursor="Hand"/>
+                    <Button Name="btnExtendDeadline" Content="📅 Продлить" Click="ExtendDeadline_Click" 
+                            Width="100" Height="30" Background="#FF5722" Foreground="White" 
+                            BorderThickness="0" Cursor="Hand"/>
+                </WrapPanel>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

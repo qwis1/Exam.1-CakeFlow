@@ -1,0 +1,11 @@
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\bin\Debug\net10.0\CakeFlow.Core.deps.json
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\bin\Debug\net10.0\CakeFlow.Core.dll
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\bin\Debug\net10.0\CakeFlow.Core.pdb
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.AssemblyInfoInputs.cache
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.AssemblyInfo.cs
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.csproj.CoreCompileInputs.cache
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.dll
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\refint\CakeFlow.Core.dll
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.pdb
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\ref\CakeFlow.Core.dll

@@ -1,0 +1,8 @@
+﻿<Application x:Class="CakeFlow.App.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CakeFlow.App"
+             StartupUri="LoginWindow.xaml">
+    <Application.Resources>
+    </Application.Resources>
+</Application>
