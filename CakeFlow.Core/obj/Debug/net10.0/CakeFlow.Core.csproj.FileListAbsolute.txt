@@ -9,3 +9,4 @@ C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.dll
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\refint\CakeFlow.Core.dll
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.pdb
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\ref\CakeFlow.Core.dll
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Core\obj\Debug\net10.0\CakeFlow.Core.sourcelink.json

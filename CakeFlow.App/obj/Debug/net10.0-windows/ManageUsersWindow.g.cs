@@ -84,7 +84,7 @@ namespace CakeFlow.App {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CakeFlow.App;V1.0.0.0;component/manageuserswindow.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CakeFlow.App;component/manageuserswindow.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ManageUsersWindow.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

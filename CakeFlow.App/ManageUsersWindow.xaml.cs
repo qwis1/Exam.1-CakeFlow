@@ -97,6 +97,7 @@ namespace CakeFlow.App
 
         private void dgUsers_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            // Исправлено: проверка, что выбранный элемент действительно User
             _selectedUser = dgUsers.SelectedItem as User;
         }
 

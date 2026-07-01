@@ -91,7 +91,7 @@ namespace CakeFlow.App {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/CakeFlow.App;V1.0.0.0;component/extenddeadlinedialog.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/CakeFlow.App;component/extenddeadlinedialog.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ExtendDeadlineDialog.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

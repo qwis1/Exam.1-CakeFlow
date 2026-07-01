@@ -80,3 +80,5 @@ C:\Users\Пк\Desktop\CakeFlow\CakeFlow.App\obj\Debug\net10.0-windows\AddUserDia
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.App\obj\Debug\net10.0-windows\AddUserDialog.g.cs
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.App\obj\Debug\net10.0-windows\ManageUsersWindow.g.cs
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.App\obj\Debug\net10.0-windows\ManageUsersWindow.baml
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.App\obj\Debug\net10.0-windows\CakeFlow.App.sourcelink.json
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.App\obj\Debug\net10.0-windows\App.baml

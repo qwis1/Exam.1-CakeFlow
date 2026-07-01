@@ -4,5 +4,8 @@
              xmlns:local="clr-namespace:CakeFlow.App"
              StartupUri="LoginWindow.xaml">
     <Application.Resources>
+        <local:BoolToVisibilityConverter x:Key="BoolToVisibilityConverter"/>
+        <local:StatusColorConverter x:Key="StatusColorConverter"/>
+        <local:RoleColorConverter x:Key="RoleColorConverter"/>
     </Application.Resources>
 </Application>

@@ -1,5 +1,5 @@
 ﻿CakeFlow.App
-1.0.0.0
+
 
 winexe
 C#
@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET10_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_O
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.App\App.xaml
 7-1788208785
 
-13-323648176
+111615056324
 227-1277899886
 AddUserDialog.xaml;ExtendDeadlineDialog.xaml;LoginWindow.xaml;MainWindow.xaml;ManageUsersWindow.xaml;OrderDialog.xaml;SelectConfectionerDialog.xaml;
 
-True
+False
 

@@ -15,3 +15,4 @@ C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Data\obj\Debug\net10.0\refint\CakeFlow.D
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Data\obj\Debug\net10.0\CakeFlow.Data.pdb
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Data\obj\Debug\net10.0\CakeFlow.Data.genruntimeconfig.cache
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Data\obj\Debug\net10.0\ref\CakeFlow.Data.dll
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Data\obj\Debug\net10.0\CakeFlow.Data.sourcelink.json

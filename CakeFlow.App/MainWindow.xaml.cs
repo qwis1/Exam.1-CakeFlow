@@ -109,8 +109,11 @@ namespace CakeFlow.App
 
                 if (cmbStatus?.SelectedItem is ComboBoxItem item && item.Content.ToString() != "Все")
                 {
-                    var status = Enum.Parse<OrderStatus>(item.Content.ToString());
-                    orders = orders.Where(o => o.Status == status).ToList();
+                    // Исправлено: безопасный парсинг с проверкой на null
+                    if (Enum.TryParse<OrderStatus>(item.Content.ToString(), out var status))
+                    {
+                        orders = orders.Where(o => o.Status == status).ToList();
+                    }
                 }
 
                 if (dgOrders != null)

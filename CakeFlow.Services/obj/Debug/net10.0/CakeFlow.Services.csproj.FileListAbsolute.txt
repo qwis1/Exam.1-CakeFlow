@@ -15,3 +15,4 @@ C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Services\obj\Debug\net10.0\CakeFlow.Serv
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Services\obj\Debug\net10.0\refint\CakeFlow.Services.dll
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Services\obj\Debug\net10.0\CakeFlow.Services.pdb
 C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Services\obj\Debug\net10.0\ref\CakeFlow.Services.dll
+C:\Users\Пк\Desktop\CakeFlow\CakeFlow.Services\obj\Debug\net10.0\CakeFlow.Services.sourcelink.json

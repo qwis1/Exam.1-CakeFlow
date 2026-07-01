@@ -10,7 +10,8 @@
         "dependencies": {
           "CakeFlow.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.9",
-          "Microsoft.EntityFrameworkCore.Tools": "10.0.9"
+          "Microsoft.EntityFrameworkCore.Tools": "10.0.9",
+          "SQLitePCLRaw.lib.e_sqlite3": "2.1.11"
         },
         "runtime": {
           "CakeFlow.Data.dll": {}
